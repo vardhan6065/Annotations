@@ -1,29 +1,38 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { contentActions } from "../store/content-slice";
+import { modalActions } from "../store/modal-slice";
 import classes from './Annotations.module.css'
+import { useSelector } from 'react-redux/es/exports';
 
 
 const AnnotationItem = (props) =>{
     const dispatch=useDispatch();
     const currContentId = useSelector(state=> state.content.currentContentId);
-    const anno = useSelector(state=> state.content.annotations);
+    // const anno = useSelector(state=> state.content.annotations);
+    const cancelItem = useSelector(state=> state.modal.cancel);
+    const deleteItem = useSelector(state=> state.modal.delete);
+    // const showPrompt = useSelector(state=>state.modal.promptIsShown);
 
-    
+
 
     const removeAnnotationHandler = () =>{
-        // console.log(props.id);
-        // console.log(currContentId);
-        console.log(anno);
-
-        dispatch(contentActions.removeAnnotation({
+        
+            dispatch(modalActions.showPrompt());
+            console.log(cancelItem)
+            
+            if(cancelItem && !deleteItem)
+            return;
+            
+            if(deleteItem)
+            dispatch(contentActions.removeAnnotation({
             itemId: props.id,
             contentId: currContentId,
             text: props.TEXT,
-        }));
-
-
+            }));
+    
     }
+
 
     return (
         <p className={classes.eachAnnotation}>

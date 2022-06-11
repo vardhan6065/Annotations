@@ -7,18 +7,6 @@ import AnnotationItem from "./AnnotationItem";
 const Annotations = () =>{
     const annotations = useSelector(state=>state.content.annotations);
     const currContentId = useSelector(state=>state.content.currentContentId);
-    // const userIsPerson=useSelector(state=>state.user.userIsPerson);
-    // const userIsOrg=useSelector(state=>state.user.userIsOrg);
-    // let currUser=-1;
-    // let User="";
-    // if(userIsPerson)
-    //     currUser=1;
-    //     User = "Person";
-    // }
-    // if(userIsOrg){
-    //     currUser=0;
-    //     User = "Org";
-    // }
 
     let con=<p className={classes.eachAnnotation}>No annotations</p>;
 
