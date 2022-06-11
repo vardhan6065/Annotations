@@ -31,11 +31,13 @@ const contentSlice = createSlice({
         },
         removeAnnotation(state,action){
             const removeIds = action.payload;
-            // const existingAnnotation = state.annotations.find(item=>item.id===removeIds.id);
+            const existingAnnotation = state.annotations.find(item=>item.id===removeIds.contentId);
 
-
-            // const existingItem = state.annotations[removeIds.contentId].ann.find(item=> item.id === removeIds.itemId);
-            state.annotations[removeIds.contentId].ann = state.annotations[removeIds.contentId].ann.filter(item => item.id !== removeIds.itemId);
+            if(existingAnnotation){
+                existingAnnotation.ann = existingAnnotation.ann.filter(item => item.id !== removeIds.itemId);
+            }
+            else
+            return;
         }
     }
 });

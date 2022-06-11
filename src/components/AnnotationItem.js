@@ -7,15 +7,22 @@ import classes from './Annotations.module.css'
 const AnnotationItem = (props) =>{
     const dispatch=useDispatch();
     const currContentId = useSelector(state=> state.content.currentContentId);
+    const anno = useSelector(state=> state.content.annotations);
+
+    
 
     const removeAnnotationHandler = () =>{
         // console.log(props.id);
         // console.log(currContentId);
+        console.log(anno);
 
         dispatch(contentActions.removeAnnotation({
             itemId: props.id,
             contentId: currContentId,
+            text: props.TEXT,
         }));
+
+
     }
 
     return (
