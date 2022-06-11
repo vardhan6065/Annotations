@@ -1,0 +1,17 @@
+.Ul{
+    margin: 0;
+}
+
+.Ul:hover{
+    cursor: pointer;
+}
+
+.Records{
+    width: 15%;
+    background-color: white;
+    height: auto;
+    box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    -webkit-box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    -moz-box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    border-radius: 3px;
+}

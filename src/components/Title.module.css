@@ -1,0 +1,11 @@
+.Title{
+    background-color: rgb(94, 24, 160);
+    padding: 0.5rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

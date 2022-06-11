@@ -1,0 +1,26 @@
+.annotations{
+    width: 30%;
+    background-color: white;
+    height: auto;
+    box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    -webkit-box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    -moz-box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    border-radius: 3px;
+}
+
+.eachAnnotation{
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 3px;
+    margin: 2px;
+}
+
+.eachAnnotation button{
+    background-color: white;
+    padding: 3px;
+    border: 0;
+    cursor: pointer;
+    /* width: 10px; */
+    font-size: large;
+}

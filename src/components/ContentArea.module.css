@@ -1,0 +1,46 @@
+.Title{
+    background-color: rgb(94, 24, 160);
+    padding: 0.5rem;
+    color: white;
+    font-weight: bold;
+    /* text-align: center; */
+    height: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Title button{
+    /* width: 5%; */
+    background-color:rgb(94, 24, 160);
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-left: 10px;
+    /* height: 80%; */
+    font-weight: bold;
+    padding: 10px;
+}
+
+.Title button:hover{
+    background-color:white;
+    color: rgb(94, 24, 160);
+}
+
+.contentarea{
+    /* border: 1px solid black; */
+    width: 50%;
+    background-color: white;
+    height: auto;
+    box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    -webkit-box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    -moz-box-shadow: 1px 1px 6px 1px rgba(143,141,141,0.44);
+    border-radius: 5px;
+}
+
+.contentarea .actualcontent{
+    padding: 10px;
+}
+
