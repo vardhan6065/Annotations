@@ -18,8 +18,8 @@ const AnnotationItem = (props) =>{
 
     const removeAnnotationHandler = () =>{
         
-            dispatch(modalActions.showPrompt());
-            console.log(cancelItem)
+            // dispatch(modalActions.showPrompt());
+            // console.log(cancelItem)
             
             if(cancelItem && !deleteItem)
             return;
